@@ -18,7 +18,7 @@
 
   function sendTheEmail() {
     let obj = {
-      sub: "Someone submitted a contact form!",
+      sub: "Someone submitted a contact form",
       txt: `${document.querySelector("#name").value} ${
         document.querySelector("#user_message").value
       }. They're email address is ${

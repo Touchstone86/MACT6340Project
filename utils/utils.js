@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import { prototype } from 'nodemailer/lib/dkim';
+import { prototype } from 'nodemailer/lib/dkim/index.js';
 
 export async function sendMessage(sub,txt){
     let transporter = nodemailer.createTransport({
@@ -28,8 +28,7 @@ await transporter
 .catch((err) => {
   console.log("Message not sent - " + err);
 });
-
-
+}
 
 //function sendMessage() {
 //const transporter = nodemailer.createTransport({
