@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
-import { prototype } from 'nodemailer/lib/dkim/index.js';
+//import { prototype } from 'nodemailer/lib/dkim/index.js';
+//import prootype is causing an error with nodemailer so I commented it out
 
 export async function sendMessage(sub,txt){
     let transporter = nodemailer.createTransport({
