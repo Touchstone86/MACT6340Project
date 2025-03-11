@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <title>Contact Artist - Spencer Jones</title>
+    <title>Contact Me - Spencer Jones</title>
     <meta name="author" content="Spencer Jones">
     <meta name="description" content="Contact page for Spencer Jones.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,13 @@
 </head>
 
 <body>
+    <header>
+        <%- include ('header'); %>
+      </header>
+
     <div class="container mt-5">
+        <h1 class="text-center">FILL OUT CONTACT INFORMATION</h1>
+        <div class="spacer"></div>
         <h1>Contact</h1>
         <form action="/mail" method="post">
             <div class="mb-3">
@@ -41,5 +47,7 @@
         crossorigin="anonymous"></script>
     <script type="module" src="./js/contact.js"></script>
 </body>
-
+<header>
+    <%- include ('footer'); %>
+  </header>
 </html>

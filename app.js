@@ -13,12 +13,19 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+app.get("/project", (req, res) => {
+    res.render("project.ejs");
+  });
 app.get("/projects", (req, res) => {
     res.render("projects.ejs");
   });
 
 app.get("/contact", (req, res) => {
     res.render("contact.ejs");
+  });
+
+  app.get("/index", (req, res) => {
+    res.render("index.ejs");
   });
 
 app.post("/mail", async (req, res) => {
