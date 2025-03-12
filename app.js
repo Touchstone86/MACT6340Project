@@ -45,6 +45,12 @@ app.post("/mail", async (req, res) => {
     });
 });
 
+app.use((err, req, res, next) => {
+  console.log(err);
+    res.render("error.ejs",{error:err.message});
+    res.send("We Found and error - ",err.message);
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
