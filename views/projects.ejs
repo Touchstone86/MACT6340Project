@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <title>Projects</title>
+    <title>Projects NFT Mint Projects Page</title>
     <meta name="author" content="Spencer Jones">
-    <meta name="description" content="Projects.">
+    <meta name="description" content="The Projects page for my personal NFT mint.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
@@ -16,18 +16,22 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-    <body> 
-        <div>Projects</div>
-        <script type="module" src="./js/index.js"></script>
-        
-    </body>
-    <body>
-      <header>
-        <%- include ('header'); %>
-      </header>
-    </body>
+<body>
+  <%- include('header'); %>
+  <div class="container">
+    <div class="spacer"></div>
+    <div>Projects</div>
+    <% projectArray.forEach((item, index) => { %>
+    <div>
+      <a href='/project/<%= index + 1 %>'><%= item %></a>
+    </div>
+    <% }); %>
+  </div>
+  <div class="container-fluid">
+    <%- include('footer'); %>
+  </div>
 
-    <header>
-        <%- include ('footer'); %>
-      </header>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
 </html>
